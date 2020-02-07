@@ -1,0 +1,25 @@
+.splash {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+
+  h1 {
+    margin: 0 0 50px;
+    font-size: $splash-heading;
+  }
+
+  .copy {
+    margin-top: -80px;
+    padding: 0 30px;
+    z-index: 100;
+  }
+
+  .social {
+    margin: 40px auto 0;
+  }
+
+  .take-action {
+    font-size: 20px;
+  }
+}

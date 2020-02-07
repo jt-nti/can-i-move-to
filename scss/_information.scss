@@ -1,0 +1,173 @@
+.information {
+  display: none;
+  padding: 150px 20px 0;
+
+  .copy {
+    margin: 0 auto;
+    max-width: $content-max-width;
+    position: relative;
+    z-index: 2;
+  }
+
+  .header-text {
+    font-size: $large-heading;
+    font-weight: 700;
+    margin: 26px auto 18px;
+
+    .very-large-text {
+      display: block;
+      font-size: $splash-heading;
+    }
+  }
+
+  h3 {
+    font-size: $main-heading;
+  }
+
+  .actions {
+    margin: 0 auto 28px;
+
+    .outer-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      appearance: none;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      margin: 0 auto;
+      padding: 0;
+
+      .inner-btn {
+        background-color: #fff;
+        border: 1px solid $pill-colour;
+        border-radius: 30px;
+        color: $pill-colour;
+        font-family: $font-family;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 25px;
+        margin: 0;
+        padding: 0 15px;
+        transition: $default-transition;
+      }
+
+      /* Hover state applying to inner button */
+      &:hover,
+      &:focus {
+        .inner-btn {
+          color: #fff;
+          background-color: $pill-colour;
+        }
+      }
+    }
+  }
+
+  .body-text {
+    text-align: left;
+  }
+
+  .with-arrow {
+    padding: 0 32px 0 0;
+    margin: 0 auto;
+    min-height: 52px;
+    background: transparent url(/img/cta-down-arrow.svg) no-repeat bottom 0 right 12px;
+    background-size: 18px 42px;
+  }
+
+  .hey-mp {
+    margin: 0 -12px;
+  }
+
+  .i-want-to-join {
+    height: 44px;
+    line-height: 42px;
+    text-decoration: none;
+    width: 100%;
+  }
+}
+
+.share {
+
+  .btn {
+    color: #fff;
+    height: 44px;
+    line-height: 42px;
+    margin-top: 15px;
+    text-decoration: none;
+    width: 100%;
+    padding: 0 20px;
+    vertical-align: middle;
+
+    &.i-want-to-share {
+      background-color: $facebook-brand-colour;
+      &:hover, &:focus {
+        background-color: $facebook-brand-colour-hover;
+      }
+    }
+
+    &.i-want-to-tweet {
+      background-color: $twitter-brand-colour;
+      &:hover, &:focus {
+        background-color: $twitter-brand-colour-hover;
+      }
+    }
+
+    &.i-want-to-say {
+      background-color: $cta-colour;
+      &:hover, &:focus {
+        background-color: $cta-colour-hover;
+      }
+    }
+
+    img {
+      display: inline-block;
+      width: auto;
+      height: auto;
+      margin: -4px 14px 0 0;
+      vertical-align: middle;
+    }
+  }
+
+  p {
+    text-align: left;
+  }
+}
+
+@media (min-width: $narrow-breakpoint) {
+  .information {
+
+    /* reflow body text to center on desktop */
+    .body-text {
+      text-align: center;
+    }
+
+    .with-arrow {
+      max-width: inherit;
+      background-position: bottom 0 right 16px;
+      padding-bottom: 32px;
+      margin: 0 0 -24px;
+    }
+
+    /* Reset HeyMP to 308px */
+    img.hey-mp {
+      max-width: 308px;
+    }
+
+    /* reflow share text to center on desktop */
+    .share {
+      p {
+        text-align: center;
+      }
+    }
+
+    /* Restricted width only when text centered */
+    .restricted-width {
+      max-width: 420px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
